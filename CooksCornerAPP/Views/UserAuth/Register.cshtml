@@ -1,0 +1,62 @@
+﻿@model CooksCornerAPP.Models.DTO.Registration
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactpagina</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/RegisterPage.css" asp-append-version="true" />
+</head>
+<body>
+    @Html.ValidationSummary()
+    <div class="Register">
+        <h1> Register  </h1> <br />
+        <form asp-action="Register" method="POST">
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Name">
+                    <input asp-for="Name" type="text" class="form-control" placeholder="Name" />
+                    <span class="text-danger" asp-validation-for="Name"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="username">
+                    <input asp-for="Username" type="text" class="form-control" placeholder="Username" />
+                    <span class="text-danger" asp-validation-for="Username"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Email">
+                    <input asp-for="Email" type="text" class="form-control" placeholder="Email" />
+                    <span class="text-danger" asp-validation-for="Email"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Password">
+                    <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="PasswordConfirm">
+                    <input asp-for="PasswordConfirm" type="password" class="form-control" placeholder="ConfirmPassword" />
+                    <span class="text-danger" asp-validation-for="PasswordConfirm"></span>
+                </label>
+            </div>
+
+            @if (TempData["msg"] != null)
+            {
+                <div class="form-group">
+                    <span class="text-info">@TempData["msg"]</span>
+                </div>
+            }
+
+            <button class="form-contactpagina__submit" type="submit"> Register </button>
+            <a class = "form-contactpagina__login" href = "/UserAuthentication/Login"> </a>
+
+        </form>
+    </div>
+</body>
+</html>
+
+

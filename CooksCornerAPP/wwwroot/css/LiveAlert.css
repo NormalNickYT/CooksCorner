@@ -1,0 +1,33 @@
+.alert {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    top: 102px;
+    left: 46%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.hideAlert {
+    display: none;
+}
+
+.showAlert {
+    display: block;
+}

@@ -1,0 +1,31 @@
+﻿@model CooksCornerAPP.ViewModels.EditProfileViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactpagina</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/EditProfileUser.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="EditProfileUser">
+        <form asp-action="UpdateProfile" asp-route-id = "@Model.Id" method="post">
+           <div class="form-outline mb-4">
+              <label class="form-label" for="Name">
+                <input asp-for="Name" type="name" class="form-control" min-length = "3" maxlength="32" placeholder="Name" required />
+                <span asp-validation-for = "Name" class="error" aria-live="polite"></span>
+            </label>
+           </div>
+            <div class="form-outline mb-4">
+             <label class="form-label" for="Email">
+                <input asp-for="Email" type="email" class="form-control" placeholder="Email" required />
+                <span asp-validation-for="Email" class="error" aria-live="polite"></span>
+            </label>
+            </div>
+            <input class="form-contactpagina__submit" type="submit" value="Update" />
+        </form>
+     </div>
+</body>
+</html>
+</html>

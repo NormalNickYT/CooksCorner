@@ -1,0 +1,35 @@
+﻿@model CooksCornerAPP.ViewModels.EditUserViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contactpagina</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/UserEdit.css" asp-append-version="true" />
+</head>
+<div class="form-contactpage">
+<h1 style="color; black;">Update User</h1>
+    <form asp-action="UpdateUser" method="post" class="form-contactpagina">
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input asp-for="Id" class="form-contactpagina__inputfield" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-contactpagina__inputfield" required />
+    </div>
+        @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+        {
+            <div class="form-group">
+                <label asp-for="Role"></label>
+                <select asp-for="Role" asp-items="@Model.Roles.Select(r => new SelectListItem { Text = r.Name, Value = r.Name, Selected = (r.Name == Model.Role) })" class="form-contactpagina__inputfield"></select>
+            </div>
+        } 
+    <div class="form-group">
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" name="password" type="password" class="form-contactpagina__inputfield" />
+    </div>
+    <button type="submit" class="form-contactpagina__submit">Save</button>
+</form>
+</div>
+</html>

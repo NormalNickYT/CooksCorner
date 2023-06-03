@@ -1,0 +1,40 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.EditProfileUser {
+    margin: auto;
+    margin-top: 280px;
+    width: 100%;
+    text-align: center;
+}
+
+
+.form-contactpagina__submit {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background: #8CE2AE;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    font-weight: 700;
+    text-align: center;
+    width: 15%;
+}
+
+.form-contactpagina__submit:hover {
+    background: #64CF97;
+}
+

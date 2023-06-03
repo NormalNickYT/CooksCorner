@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactpagina</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="form-contactpage">
+        <h1> Contact Page </h1>
+        <form novalidate method="post" id="myForm" class="form-contactpagina">
+            <label for="subject">
+                <input name="subject" id="subject" type="text" class="form-contactpagina__inputfield" maxlength="200" placeholder="Subject" minlength="2" required />
+                <span class="error" aria-live="polite"></span>
+            </label>
+            <label for="email">
+                <input name="email" id="email" type="email" class="form-contactpagina__inputfield" placeholder="Email" required minlength="8" />
+                <span class="error" aria-live="polite"></span>
+            </label>
+            <label for="message">
+                <textarea name="message" id="message" class="form-contactpagina__inputfield-textcomment" maxlength="600" placeholder="Bericht" required></textarea>
+                <span class="error" aria-live="polite"></span>
+            </label>
+            <input class="form-contactpagina__submit" type="submit" value="submit" />
+        </form>
+    </div>
+    <!-- Modal pop-up -->
+    <div id="modal">Some text some message..</div>
+</body>
+</html>
+<script defer src="@Url.Content("~/js/formvalidation.js")"></script>
+

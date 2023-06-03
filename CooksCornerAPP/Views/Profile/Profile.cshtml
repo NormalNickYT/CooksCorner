@@ -1,0 +1,102 @@
+﻿@model CooksCornerAPP.Data.ApplicationUser
+@{
+    Layout = "~/Views/Shared/ProfileLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/ProfilePage.css" asp-append-version="true" />
+</head>
+<body>
+<div class="container">
+    <div class="main-body">
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                     @if (Model.Image != null)
+                      {
+                        <img src="data:image;base64,@System.Convert.ToBase64String(@Model.Image)" alt="User Image" width="150" />
+                      } else
+                      {
+                          <h1> No profile pic </h1>       
+                       }
+                       <form asp-action="AddProfilePicture" method="post" enctype="multipart/form-data" asp-route-id="@Model.Id">
+                       <div>
+                            <input type="file" name="file" class="form-control-file" accept=".png,.jpg,.jpeg,.gif,.tif" required>
+                        </div>
+                         <small class="form-text text-muted">Please select a JPEG, PNG, or GIF image file.</small>
+                       <button type="submit" class="btn btn-primary">Submit Profile Picture</button>
+                     </form>
+                    <div class="mt-3">
+                      <h4> @Model.Name </h4>
+                      <p class="text-secondary mb-1">Fill in here</p>
+                      <p class="text-muted font-size-sm">Adress fill in here</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <form asp-action="ManageRecipes" asp-route-id="@Model.Id" method="post">
+                       <button class="btn btn-info">  Manage Recipes </button>
+                     </form>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <form asp-action="FavoriteRecipes" asp-route-id="@Model.Id" method="post">
+                       <button class="btn btn-info">  Favorite Recipes </button>
+                     </form>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"> My Reviews </h6>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0"> Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      @Model.Name
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      @Model.Email
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <form asp-action="EditProfile" asp-route-id="@Model.Id" method="get">
+                         <button class="btn btn-info">Edit</button>
+                      </form>
+                    </div>
+                  </div> <br />
+                  <div class="row">
+                   <div class="col-sm-12">
+                     <form asp-action="ChangePassword" asp-route-id="@Model.Id" method="get">
+                         <button class="btn btn-info">Change Password</button>
+                      </form>
+                    </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</body>
+</html>

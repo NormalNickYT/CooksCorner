@@ -1,0 +1,60 @@
+﻿@model CooksCornerAPP.Models.DTO.Login
+@using Microsoft.Extensions.Configuration
+@using Microsoft.Extensions.Options
+@using CooksCornerAPP.Services
+@inject IOptions<GoogleCaptchaConfig> GoogleCaptchaConfig
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactpagina</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="InlogPage">
+    <h1> Login  </h1> <br />
+    <form asp-action="Login" method="post">
+        <input type="hidden" id="LoginModelToken" asp-for="Token" />
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="email">
+                <input asp-for="Email" type="email" class="form-control" placeholder="Email" />
+                <span asp-validation-for="Email" class="error" aria-live="polite"></span>
+            </label>
+        </div>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <label class="form-label" for="email">
+                <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                <span asp-validation-for="Password" class="error" aria-live="polite"></span>
+            </label>
+        </div>
+        <div class="col">
+           <a asp-action="ForgotPassword"> <p> Don't remember your password? </p> </a>
+           <a asp-action="Register"> <p> No account yet? </p> </a>
+        </div>
+
+       <button type="submit" class="form-contactpagina__submit">Login</button>
+    </form>
+
+        @if (TempData["msg"] != null)
+        {
+          <div class="alert mb-1">
+                @TempData["msg"]
+          </div>
+        }
+   </div>
+</body>
+</html>
+<script src="https://www.google.com/recaptcha/api.js?render=@GoogleCaptchaConfig.Value.SiteKey"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('@GoogleCaptchaConfig.Value.SiteKey', { action: 'submit' }).then(function (token) {
+                document.getElementById("LoginModelToken").value = token;
+            });
+        });
+    });
+</script>

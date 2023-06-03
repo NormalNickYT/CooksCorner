@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CooksCornerAPP
+build_property.RootNamespace = CooksCornerAPP
+build_property.ProjectDir = C:\Users\nkost\CooksCornerProject\CooksCornerAPP\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\nkost\CooksCornerProject\CooksCornerAPP
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Contact/ContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDb250YWN0Rm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/ManageUsers/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlcnNcRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/ManageUsers/ListUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlVXNlcnNcTGlzdFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Meals/Lunch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVhbHNcTHVuY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Profile/AddRecipes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxBZGRSZWNpcGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Profile/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Profile/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxFZGl0UHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Profile/FavoriteRecipes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxGYXZvcml0ZVJlY2lwZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Profile/ManageRecipes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxNYW5hZ2VSZWNpcGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Profile/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Recipes/RecipeDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xSZWNpcGVEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/UserAuth/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhcRm9yZ290UGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/UserAuth/ForgotPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhcRm9yZ290UGFzc3dvcmRDb25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/UserAuth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/UserAuth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhcUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/UserAuth/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhcUmVzZXRQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/UserAuth/ResetPasswordConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhcUmVzZXRQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Shared/ProfileLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFByb2ZpbGVMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-igbcomia63
+
+[C:/Users/nkost/CooksCornerProject/CooksCornerAPP/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-31rbyykbf9

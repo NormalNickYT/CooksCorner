@@ -1,0 +1,120 @@
+:root {
+    --bodyBack: #ffeaed;
+    --textColor: #1b2741;
+    --starColor: #f67034;
+    --sectionBack: #f7f6f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+    .header h1 {
+        font-size: 4em;
+        text-transform: uppercase;
+        color: black;
+    }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
+    margin: 1em;
+    font-family: Montserrat;
+}
+
+.recipes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    border-radius: 1.2em;
+}
+
+.content {
+    background: #ffff;
+    margin: 1em;
+}
+
+.img {
+    background-image: url("/images/LunchMeal.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 265px;
+    border-radius: 1.2em 1.2em 0 0;
+}
+
+.review-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .6em;
+}
+
+.stars i {
+    color: rgb(255, 238, 0);
+    font-size: 8em;
+}
+
+.stars span {
+    font-size: .85em;
+    color: rgb(36, 36, 36);
+}
+
+.name {
+    font-size: 1.3em;
+    color: #000;
+}
+
+
+.like-button {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2em;
+    line-height: 1.92em;
+    background: #06c995;
+    padding: .5em .8em;
+}
+
+.categoryName {
+    color: grey;
+    font-weight: 100;
+    font-family: 'Comic Sans MS';
+    opacity: 0.5;
+}
+
+
+@media screen and (min-width: 500px) {
+
+    .card {
+        width: 350px;
+        margin: 0 auto;
+    }
+}

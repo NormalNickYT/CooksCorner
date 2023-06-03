@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CooksCorner</title>
+    <link rel="stylesheet" href="~/css/IndexPage.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- Cookie Container -->
+    <div class="cookie-container">
+        <section class="gdpr-consent hide">
+            <div class="gdpr-consent__description">
+                <p>
+                    Deze website gebruikt cookies. We gebruiken cookies om content te
+                    personaliseren, voor social media en het analyseren van verkeer op
+                    de website, advertenties.
+                </p>
+            </div> <br>
+            <div class="gdpr-consent__choice">
+                <button class="gdpr-consent__button--accept">Ja, natuurlijk</button>
+                <button class="gdpr-consent__button--reject">
+                    Neu, misschien later
+                </button>
+            </div>
+        </section>
+    </div>
+    <div class="header" style="background-image: url('@Url.Content("~/images/Develop.png")');">
+        <div class="container">
+            <div class="header-content-text">
+                <h1 class="header-content-text-headtext">I'm <span class="header-content-text-headtext__name"> Nick</span>, a <br> Web Developer</h1> <br>
+                <p class="header-content-text-aboutmetext">Web Development Enthusiast and Future Mastermind. <br> Currently honing my skills as a student at Windesheim in the Netherlands. <br> Fueled by caffeine and a passion for crafting intuitive user experiences. </p>
+            </div>
+        </div>
+    </div>
+    <section class="profile">
+        <section class="profile-content">
+            <div class="profile-content__category--hidden-mobile">
+                <h3 class="profile-content__category-title">
+                    <i class="fas fa-chess-queen" style="color: black"> </i> Profiel
+                </h3>
+                <hr />
+            </div>
+            <div class="profile-content__element--hidden-mobile">
+                <div class="profile-content__element-header"></div>
+                <p class="profile-content__description">
+                    my name is uvuvwevwevwe onyetenyevwe ugwemuhwem osas
+                </p>
+                <p></p>
+            </div>
+            <div class="profile-content__category">
+                <h3 class="profile-content__category-title">
+                    <i class="fas fa-briefcase" style="color: black"> </i> Opleidingen
+                </h3>
+                <hr />
+            </div>
+            <div class="profile-content__element">
+                <div class="profile-content__element-header">
+                    <h4 class="profile-content__title">Applicatie Ontwikkelaar</h4>
+                    <p class="profile-content__period">nov 2018 - mei 2020</p>
+                </div>
+                <p class="profile-content__institute">
+                    MBO Alfa College, Hoogeveen
+                </p>
+            </div>
+            <div class="profile-content__element">
+                <div class="profile-content__element-header">
+                    <h4 class="profile-content__title">ICT</h4>
+                    <p class="profile-content__period">aug 2021 - jul 2025</p>
+                </div>
+                <p class="profile-content__institute">Windesheim, Zwolle</p>
+            </div>
+            <div class="profile_content_category">
+                <h3 class="profile-content__category-title">
+                    <i class="fas fa-code" style="color: black"> </i> Skills
+                </h3>
+                <hr />
+            </div>
+            <div class="profile_content__skills">
+                <ul>
+                    <li>C#</li>
+                    <li>Java</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+        </section>
+    </section>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/gdpr.js" asp-append-version="true"></script>
+</body>
+</html>

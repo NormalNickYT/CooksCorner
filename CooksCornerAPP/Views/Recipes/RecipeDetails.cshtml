@@ -1,0 +1,65 @@
+﻿@model CooksCornerAPP.ViewModels.RecipeDetailViewModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactpagina</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/RecipesPage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+            <div class="product-div">
+                <div class="product-div-left">
+                    <div class="img-container">
+                        @if (Model.Image != null)
+                        {
+                            <img src="data:image;base64,@System.Convert.ToBase64String(@Model.Image)" alt="RecipeImage" alt="..." />
+                        }
+                        else
+                        {
+                            <h1> No Recipe Image Found! </h1>
+                        }
+                    </div>
+                </div>
+
+                <div class="product-div-right">
+                    <span class="product-name">
+                        @Model.RecipeName
+                    </span>
+                    <div class="product-rating">
+                        <i class="fas fa-star"> </i>
+                        <i class="fas fa-star"> </i>
+                        <i class="fas fa-star"> </i>
+                        <i class="fas fa-star"> </i>
+                        <i class="fas fa-star-half-alt"> </i>
+                        <span> 4.7 (21) </span>
+                    </div>
+                    <p class="product-description">
+                        @Model.Description
+                    </p> <br />
+                    <div class="product-prepareInfo">
+                        <p> <i class="fa fa-check"></i> Prep Time: @Model.PrepTime</p>
+                        <p> <i class="fa fa-check"></i> Cook Time: @Model.CookTime</p>
+                        <p> <i class="fa fa-check"></i> Additional Time: @Model.AdditionalTime</p>
+                        <p> <i class="fa fa-check"></i> Total Time: @Model.TotalTime</p>
+                        <p> <i class="fa fa-check"></i> Servings: @Model.Servings </p>
+                    </div>
+                    <div class="Ingredients">
+                        <p> @Model.Ingredients </p>
+                    </div>
+                    <div class="btn-groups">
+                        <button type="button" class="favorite-button">
+                            <i class="fas fa-star"> </i>
+                            Favorite
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

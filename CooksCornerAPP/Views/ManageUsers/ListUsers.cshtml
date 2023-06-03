@@ -1,0 +1,78 @@
+﻿@using CooksCornerAPP.Data
+@using CooksCornerAPP.ViewModels
+@model IEnumerable<ManageUsersViewModel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/ManageUsers.css" asp-append-version="true" />
+</head>
+
+<table class="styled-table">
+    <div class="table-title">
+     <h2>User <b>Management</b></h2>
+    </div>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+
+        {
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.User.Id</td>
+                    <td>@user.User.Name </td>
+                    <td>@user.User.Email</td>
+                    <td>@user.Role</td>
+                    <td>
+                        <form asp-action="EditUser" asp-route-id="@user.User.Id" method="post">
+                            <button class = "manage_submit__buton"> Edit </button>
+                        </form>
+                        <form asp-action="Delete" asp-route-id="@user.User.Id" method="post">
+                            <button class = "manage_submit__buton" class="delete" title="Delete"> Delete </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+
+        @if (User.Identity.IsAuthenticated && User.IsInRole("moderator"))
+
+        {
+            @foreach (var user in Model)
+            {
+
+                if (user.Role != "admin")
+                {
+                 <tr>
+                    <td>@user.User.Id</td>
+                    <td>@user.User.Name </td>
+                    <td>@user.User.Email</td>
+                    <td>@user.Role</td>
+                    <td>
+                        <form asp-action="EditUser" asp-route-id="@user.User.Id" method="post">
+                            <button class = "manage_submit__buton"> Edit </button>
+                        </form>
+                        <form asp-action="Delete" asp-route-id="@user.User.Id" method="post">
+                            <button class = "manage_submit__buton" class="delete" title="Delete"> Delete </button>
+                        </form>
+                    </td>
+                </tr>
+                }
+              
+            }
+        }
+
+    </tbody>
+</table
+</html>

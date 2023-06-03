@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+nav .navbar-nav li a {
+    color: black !important;
+}
+
+.navbar-expand-lg navbar-nav .nav-link {
+    padding: 2rem 1.2rem;
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #fec400;
+    transition: 0.4s
+}
+
+.nav-item:hover::after {
+    width: 100%
+}
+
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fec400
+}
+
+
+
+:root {
+    --bg-color: #222327;
+    --text-color: black;
+    --main-color: #FFA200;
+    --bodyBack: #ffeaed;
+    --textColor: #1b2741;
+    --starColor: #f67034;
+    --sectionBack: #f7f6f9;
+}
+
+body {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero {
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section {
+    padding: 0 10%;
+}
+
+.hero-text h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.hero-text h1 {
+    font-family: Roboto;
+    font-size: 90px;
+    line-height: 1;
+    color: black;
+    margin: 0 0 45px;
+}
+
+.hero-text h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    color: black;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.hero-img img {
+    width: 700px;
+    height: auto;
+}
+
+.hero-main__changeColor {
+    color: #FFA200;
+}
+
+@media (max-width: 1460px) {
+    section {
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+
+@media (max-width: 1340px) {
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+
+    .hero-text h5 {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 1195px) {
+    section {
+        padding: 0 3%;
+        transition: .2s;
+    }
+
+    .hero-text {
+        padding-top: 115px;
+    }
+
+    .hero-img {
+        text-align: center;
+    }
+
+        .hero-img img {
+            width: 560px;
+            height: auto;
+        }
+
+    .hero {
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px) {
+    .hero-img img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 943px) {
+    .main-card-header-text {
+        text-align: center;
+    }
+}
+
+.mainCards {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f7f8;
+    flex-direction: column;
+    height: unset;
+    padding: 30px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: min-content;
+    padding: 20px;
+    margin: 0 20px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+    transition: .4s ease;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card .card-image {
+        position: relative;
+        width: 280px;
+        height: 280px;
+        padding: 0 20px;
+        text-align: center;
+        border-radius: 12px;
+    }
+
+        .card .card-image img {
+            width: 100%;
+            transition: .4s ease;
+        }
+
+        .card .card-image .bx-star {
+            cursor: pointer;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 10px;
+            font-size: 20px;
+            color: white;
+            background: #FFA200;
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+        }
+
+    .card .card-content h3 {
+        color: #222;
+        font-size: 22px;
+        margin-top: 20px;
+    }
+
+    .card .card-content p {
+        color: #555;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 8px 0 22px;
+        text-align: justify;
+    }
+
+
+.container .card {
+    margin: 20px;
+}
+
+@media (max-width: 1280px) {
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+        .container .card {
+            margin: 20px;
+        }
+}
+
+.stars i {
+    color: rgb(255,238,0);
+    font-size: .8em;
+}
+
+.card-content__recipetext {
+    color: #5F5F5F;
+    opacity: 0.5;
+}
+
+
+/* Cookie Message */
+
+.cookie-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.gdpr-consent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid gray;
+    border-radius: 15px 15px 15px 15px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gdpr-consent__description {
+    display: flex;
+    justify-content: center;
+}
+
+.gdpr-consent__choice {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.gdpr-consent__button--accept {
+    background-color: #F38099;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.gdpr-consent__button--accept:hover {
+    background-color: #c5e3c5;
+}
+
+.gdpr-consent__button--reject {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F38099;
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+

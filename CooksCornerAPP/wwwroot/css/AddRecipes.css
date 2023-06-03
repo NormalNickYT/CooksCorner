@@ -1,0 +1,91 @@
+/* Contact Page Mobile Version*/
+
+* {
+    /* Border randen weghalen */
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.AddRecipe {
+    margin: auto;
+    margin-top: 160px;
+    width: 40%;
+    text-align: center;
+    padding: 24px 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.3);
+}
+
+.form-contactpage {
+    margin: auto;
+    margin-top: 200px;
+    width: 3%;
+}
+
+.form-contactpagina__inputfield {
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #8CE2AE;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    outline: 0;
+}
+
+.form-contactpagina__inputfield-textcomment {
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #8CE2AE;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+
+.form-contactpagina__submit {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    width: 80%;
+    background: #8CE2AE;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    font-weight: 700;
+    text-align: center;
+}
+
+    .form-contactpagina__submit:hover {
+        background: #64CF97;
+    }
+
+
+/* Profile page content */
+
+

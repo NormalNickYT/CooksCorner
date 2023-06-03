@@ -1,0 +1,90 @@
+﻿@model CooksCornerAPP.ViewModels.AddRecipeViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactpagina</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/AddRecipes.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="AddRecipe">
+        <h1> Add Recipe  </h1> <br />
+        <p> Uploading personal recipes is easy! Add yours to your favorites </p>
+        <p> , share with friends, family, or the Allrecipes community.</p></p>
+        <form asp-action="CreateRecipes" asp-route-id="@Model.User.Id" method="post" enctype="multipart/form-data">
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Name">
+                    <input asp-for="Recipe.Name" type="name" class="form-control" placeholder="Name" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Description">
+                    <textarea asp-for="Recipe.Description" class="form-control" placeholder="Description" rows="3" required /> </textarea>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Category">
+                    <input asp-for="Recipe.Category" type="text" class="form-control" placeholder="Category" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="prepTime">
+                    <input asp-for="Recipe.PrepTime" type="text" class="form-control" pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$" placeholder="Prep Time (hours 5:00)" placeholder="prepTime" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="AdditionalTime">
+                    <input asp-for="Recipe.AdditionalTime" type="text" pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$" class="form-control" placeholder="Additional Time (hours 5:00)" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="CookTime">
+                    <input asp-for="Recipe.CookTime" type="text" pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$" class="form-control" placeholder="Cook Time (hours 5:00)" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="TotalTime">
+                    <input asp-for="Recipe.TotalTime" type="text" pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$" class="form-control" placeholder="Total Time (hours 5:00)" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="File">
+                    <input name="file" type="file" accept=".png,.jpg,.jpeg,.gif,.tif" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Servings">
+                    <input asp-for="Recipe.Servings" type="text" class="form-control" placeholder="Servings" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="Servings">
+                    <input asp-for="Recipe.Ingredients" type="text" class="form-control" placeholder="Ingredients" required />
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+            <button type="submit" class="form-contactpagina__submit">Add Recipe</button>
+        </form>
+
+        @if (TempData["msg"] != null)
+        {
+            <div class="alert mb-1">
+                @TempData["msg"]
+            </div>
+        }
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,87 @@
+﻿@model CooksCornerAPP.ViewModels.FavoriteRecipesViewModel
+@{
+    Layout = "~/Views/Shared/ProfileLayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/ProfilePage.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <div class="main-body">
+            <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                @if (Model.User.Image != null)
+                                {
+                                    <img src="data:image;base64,@System.Convert.ToBase64String(@Model.User.Image)" alt="User Image" width="150" />
+                                }
+                                else
+                                {
+                                    <h1> No profile pic </h1>
+                                }
+                                <div class="mt-3">
+                                    <h4> @Model.User.Name </h4>
+                                    <p class="text-secondary mb-1">Fill in here</p>
+                                    <p class="text-muted font-size-sm">Adress fill in here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mt-3">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0">  My Recipes </h6>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0"> My Favorites </h6>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0"> My Reviews </h6>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                                <h6 class="mb-0"> Change Password </h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                @if (Model.FavoriteRecipes.Count == 0)
+                                {
+                                    <p> No Favorited Yet </p>
+                                }
+                                else
+                                {
+                                    @foreach (var userfavoriteRecipes in Model.FavoriteRecipes)
+                                    {
+                                        <div class="col-sm-6">
+                                            <div class="card" style="width: 18rem;">
+                                                <img class="card-img-top" src="data:image;base64,@System.Convert.ToBase64String(userfavoriteRecipes.Recipe.Image)" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"> @userfavoriteRecipes.Recipe.Name </h5>
+                                                    <p class="card-text"> @userfavoriteRecipes.Recipe.Description </p>
+                                                    <form asp-action="RemoveFavoriteRecipe" asp-route-recipeId="@userfavoriteRecipes.Recipe.Id" method="post">
+                                                        <button class="btn btn-info"> Remove Favorite</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
