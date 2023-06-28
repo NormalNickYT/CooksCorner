@@ -1,5 +1,5 @@
 # CooksCorner
-CooksCorner is a project i created for school. In CooksCorner users can add their own recipes and favorite other ones recipes. 
+CooksCorner is a webdev project i created for school at Windesheim. In CooksCorner users can add their own recipes and view others aswell as favorite other recipes with realtime interaction using Websockets. 
 # Setup
 The app is in .NET 6 and can be started by building the `CooksCornerAPP` in Visual Studio.
 
